@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_POST, LOADING } from "../../utils/actions";
 import API from "../../utils/API";
-import Navbar from '../Navbar/navbar'
-// import tracker component here
+// import Navbar from '../Navbar/navbar'
+// import tracker component here like navbar above
 
 function CreateProfile() {
   const [name, changeName] = useState('');
