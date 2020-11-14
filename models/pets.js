@@ -9,7 +9,6 @@ const petsSchema = new Schema({
   //going to add more in future. 
 });
 
-const Book = mongoose.model("Pets", petsSchema);
+const Pets = mongoose.model("Pets", petsSchema);
 
 module.exports = Pets;
-
