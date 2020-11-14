@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/navbar";
+import Home from "./pages/Home";
 
 
 
@@ -12,9 +13,9 @@ class App extends Component {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/Login" component={Login} />
+          {/* <Route path="/Login" component={Login} /> */}
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     );
   }
