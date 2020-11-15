@@ -1,23 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar/navbar";
+import Home from "./pages/Home";
+import Jumbo from "./components/Jumbo/jumbotron";
 
 
-
-class App extends Component {
-  render() {
+function App() {
     return (
       <Router>
         <Navbar />
+        <Jumbo />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/Login" component={Login} />
         </Switch>
-        <Footer />
       </Router>
     );
   }
-}
+
 
 export default App;
