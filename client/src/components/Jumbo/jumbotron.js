@@ -5,12 +5,12 @@ function Jumbo() {
   return (
     <div>
       <Jumbotron>
-        <h1 className="display-3">Hello, world!</h1>
-        <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+        <h1 className="display-3">Hello, Pet Pals!</h1>
+        <p className="lead">Start tracking your pet with this nifty web app today!</p>
         <hr className="my-2" />
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p>With a budget tracker and day to day tracker, you can learn more about your pet's needs.</p>
         <p className="lead">
-          <Button color="primary">Learn More</Button>
+          <Button color="primary">Sign up here!</Button>
         </p>
       </Jumbotron>
     </div>
