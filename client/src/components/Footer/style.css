@@ -1,0 +1,20 @@
+/* Footer */
+.footer {
+    background-color: transparent;
+    text-align: center;
+    position: fixed;
+    width:100%;
+    display: block;
+    bottom: 0;
+    padding: 20px;
+}
+/* Font Awesome Icon */
+.fa {
+    margin-right: 5px !important;
+}
+.fas {
+    margin-left: 5px !important;
+}
+.container {
+    justify-content: center !important;
+}
