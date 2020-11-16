@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/navbar";
 import Home from "./pages/Home";
 import Jumbo from "./components/Jumbo/jumbotron";
+import Footer from "./components/Footer/footer";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
         </Switch>
+        <Footer />
       </Router>
     );
   }

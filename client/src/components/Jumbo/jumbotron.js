@@ -11,7 +11,7 @@ function Jumbo() {
         <hr className="my-2" />
         <p>With a budget tracker and day to day tracker -- you can learn more about your pet's needs.</p>
         <p className="lead">
-          <Button className="btn" color="primary">Sign up here!</Button>
+          <Button className="btn">Sign up here!</Button>
         </p>
       </Jumbotron>
     </div>
