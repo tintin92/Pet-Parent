@@ -19,12 +19,12 @@ function Navbar() {
                         <li className="nav-item">
                             <Link className="nav-link" to="/Profile">Profile</Link>
                         </li>
-                        {/* <li className="nav-item">
+                        <li className="nav-item">
                             <Link className="nav-link" to="/Login">Login</Link>
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" to="/Signup">Sign up</Link>
-                        </li> */}
+                        </li>
                     </ul>
                 </div>
             </nav>
