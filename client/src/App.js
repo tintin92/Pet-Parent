@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import createProfile from "./pages/createProfile";
+// import createProfile from "./pages/createProfile";
 import Footer from "./components/Footer/footer";
 
 
@@ -17,7 +17,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/createProfile" component={createProfile} />
+          {/* <Route exact path="/createProfile" component={createProfile} /> */}
           <Route exact path="/Profile" component={Profile} />
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup} />
