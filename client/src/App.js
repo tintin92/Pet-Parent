@@ -4,18 +4,21 @@ import "./App.css";
 import Navbar from "./components/Navbar/navbar";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-// import Jumbo from "./components/Jumbo/jumbotron";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Footer from "./components/Footer/footer";
+
 
 
 function App() {
     return (
       <Router>
         <Navbar />
-        {/* <Jumbo /> */}
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/Profile" component={Profile} />
+          <Route exact path="/Login" component={Login} />
+          <Route exact path="/Signup" component={Signup} />
         </Switch>
         <Footer />
       </Router>
