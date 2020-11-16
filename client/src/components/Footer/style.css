@@ -1,12 +1,21 @@
 /* Footer */
-.footer {
+.footer, .container{
     background-color: transparent;
     text-align: center;
-    position: fixed;
+    position: fixed !important;
     width:100%;
     display: block;
-    bottom: 0;
+    bottom: 0 !important;
     padding: 20px;
+}
+/* foot media adjustment */
+@media screen and (max-width: 480px) {
+    .footer {
+        position: fixed;
+        top: auto;
+        left: auto;
+        height: auto;
+    }
 }
 /* Font Awesome Icon */
 .fa {
