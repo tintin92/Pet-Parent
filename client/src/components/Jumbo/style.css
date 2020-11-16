@@ -1,0 +1,10 @@
+.btn {
+    background-color: lightblue !important;
+    color: black !important;
+    border-color: black !important;
+}
+
+h1, p {
+    text-align: center;
+}
+
