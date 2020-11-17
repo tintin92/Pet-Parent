@@ -23,7 +23,7 @@ function CreateProfile() {
     console.log(name, age, birthday, species, breed, weight, location)
     e.preventDefault();
     dispatch({ type: LOADING });
-    API.savePost({
+    API.saveProfile({
       name,
       age,
       birthday,

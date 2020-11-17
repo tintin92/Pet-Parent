@@ -11,7 +11,7 @@ function PetCard() {
     const [state, dispatch] = useStoreContext();
 
     const removePost = id => {
-        API.deletePost(id)
+        API.deleteProfile(id)
             .then(() => {
                 dispatch({
                     type: REMOVE_POST,
@@ -21,9 +21,9 @@ function PetCard() {
             .catch(err => console.log(err));
     };
 
-    const getPosts = () => {
+    const getProfiles = () => {
         dispatch({ type: LOADING });
-        API.getPosts()
+        API.getProfiles()
             .then(results => {
                 dispatch({
                     type: UPDATE_POSTS,
@@ -34,7 +34,7 @@ function PetCard() {
     };
 
     useEffect(() => {
-        getPosts();
+        getProfiles();
     }, []);
 
     return (
