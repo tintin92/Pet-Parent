@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../models/pets");
 
 // Defining methods for the profilesController
 module.exports = {
@@ -29,4 +29,6 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
+// router.route("/login")
+
 };
