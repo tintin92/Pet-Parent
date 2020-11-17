@@ -1,8 +1,8 @@
 
 // import React, { useState } from "react";
-// import { useStoreContext } from "../../utils/GlobalState";
-// import { ADD_POST, LOADING } from "../../utils/actions";
-// import API from "../../utils/API";
+// // import { useStoreContext } from "../utils/GlobalState";
+// import { ADD_POST, LOADING } from "../utils/actions";
+// import API from "../utils/API";
 // // import Navbar from '../Navbar/navbar'
 // // import tracker component here like navbar above
 
@@ -14,8 +14,9 @@
 //   const [breed, changeBreed] = useState('');
 //   const [weight, changeWeight] = useState('');
 //   const [location, changeLocation] = useState('');
+// //   chip, allergies, nickname
 
-//   const [state, dispatch] = useStoreContext();
+//   // const [state, dispatch] = useStoreContext();
 
 //   const handleSubmit = e => {
 //     e.preventDefault();
@@ -65,9 +66,9 @@
 //         <input className="form-control mb-5" required onChange={(event) => changeBreed(event.target.value)} value={name} placeholder="Breed (i.e. domestic short hair, labrador, etc)" />
 //         <input className="form-control mb-5" required onChange={(event) => changeWeight(event.target.value)} value={weight} placeholder="Weight" />
 //         <input className="form-control mb-5" required onChange={(event) => changeLocation(event.target.value)} value={location} placeholder="Location" />
-//         <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit">
+//         {/* <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit">
 //           Save Profile
-//         </button>
+//         </button> */}
 //       </form>
 //     </div>
 //   );
