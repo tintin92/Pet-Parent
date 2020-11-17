@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const passport = require("passport");
+// const passport = require("passport");
 const usersController = require("../../controllers/usersController");
 // Matches with "/api/users"
 router.route("/")
@@ -9,10 +9,6 @@ router.route("/")
 router.route("/register")
   .post(usersController.register);
 
-router.route("/login")
-
-  //Added this to redirect to the login 
-  .post(passport.authenticate('local', { failureRedirect: '/login' }), usersController.login);
 //Changed to post route to match the request
 
 router.route("/logout")

@@ -11,8 +11,11 @@ import Footer from "./components/Footer/footer";
 
 
 function App() {
-    return (
-      <Router>
+  return (
+    <Router>
+      <div>
+        <StoreProvider>
+      
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
@@ -20,6 +23,8 @@ function App() {
           <Route exact path="/Login" component={Login} />
           <Route exact path="/Signup" component={Signup} />
         </Switch>
+        </StoreProvider>
+      </div> 
         <Footer />
       </Router>
     );

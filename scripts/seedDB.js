@@ -16,7 +16,6 @@ const petProfileSeed = [
         age: 6,
         weight: 100,
         food: "Pedigree",
-        weight: "20",
         allergy: "wheat",
         vaccine: "Up to Date",
         chipNumber: "34567"
