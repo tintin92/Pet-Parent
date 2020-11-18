@@ -4,7 +4,26 @@
     border-color: black !important;
 }
 
-h1, p {
+/* h1, p {
     text-align: center;
+} */
+
+.jumbotron {
+    background-image: url("/assets/images/pets.jpg") !important;
+    /* margin-left: 110px;
+    margin-right: 110px; */
+    margin-top: 10px;
+    font-family: 'Goldman', cursive;
+    background-size: cover;
+    background-position: bottom;
+    border: thin solid black;
+}
+
+.display-3, .lead {
+    color: rgb(41, 51, 85);
+}
+
+div {
+    background-color: #cfcbd1;
 }
 
