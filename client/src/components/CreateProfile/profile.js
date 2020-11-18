@@ -23,22 +23,22 @@ function CreateProfile() {
     console.log(name, age, birthday, species, breed, weight, location)
     e.preventDefault();
     dispatch({ type: LOADING });
-    // API.savePost({
-    //   name,
-    //   age,
-    //   birthday,
-    //   species,
-    //   breed,
-    //   weight,
-    //   location
-    // })
-      // .then(result => {
-      //   dispatch({
-      //     type: ADD_POST,
-      //     post: result.data
-      //   });
-      // })
-      // .catch(err => console.log(err));
+    API.saveProfile({
+      name,
+      age,
+      birthday,
+      species,
+      breed,
+      weight,
+      location
+    })
+      .then(result => {
+        dispatch({
+          type: ADD_POST,
+          post: result.data
+        });
+      })
+      .catch(err => console.log(err));
 
     changeName("");
     changeAge("");
@@ -57,6 +57,7 @@ function CreateProfile() {
         <img
           className="img-fluid img-thumbnail"
           src="https://via.placeholder.com/300"
+          alt="placeholder"
         />
       </div>
       <h1>Add your Pet</h1>
