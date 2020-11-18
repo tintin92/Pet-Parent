@@ -1,17 +1,55 @@
-import React from 'react';
 import Budget from "../components/Budget/budget";
 import PetCard from "../components/PetCard/card";
+import { useStoreContext } from "../components/utils/GlobalState";
+import React, { useEffect } from "react";
+import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../components/utils/actions";
+import API from "../components/utils/API";
+import CreateProfile from "../components/CreateProfile/profile"
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
 function Profile() {
+
+    const [state, dispatch] = useStoreContext();
+
+    const removePost = id => {
+        API.deleteProfile(id)
+            .then(() => {
+                dispatch({
+                    type: REMOVE_POST,
+                    _id: id
+                });
+            })
+            .catch(err => console.log(err));
+    };
+
+    const getProfiles = () => {
+        dispatch({ type: LOADING });
+        API.getProfiles()
+            .then(results => {
+                dispatch({
+                    type: UPDATE_POSTS,
+                    posts: results.data
+                });
+            })
+            .catch(err => console.log(err));
+    };
+
+    useEffect(() => {
+        getProfiles();
+    }, []);
+
+
     return (
         <div className="row">
             <div className="col">
                 <Card>
-                    <PetCard />
+                    <CreateProfile />
+                </Card>
+                <Card>
+                    <PetCard removePost={removePost} posts={state.posts}/>
                     {/* <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
                     <CardBody>
                         <CardTitle tag="h5">Card title</CardTitle>

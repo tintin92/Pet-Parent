@@ -52,13 +52,13 @@ function CreateProfile() {
   return (
     <div>
       {/* to add tracker/budget render it here like below with navbar*/}
-      <div className="jumbotron">
+      {/* <div className="jumbotron">
         <img
           className="img-fluid img-thumbnail"
           src="https://via.placeholder.com/300"
           alt="placeholder"
         />
-      </div>
+      </div> */}
       <h1>Add your Pet</h1>
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" required onChange={(event) => changeName(event.target.value)} value={name} placeholder="Name" />
