@@ -20,7 +20,6 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-         
             <Route exact path="/Profile" component={Profile} />
             <Route exact path="/Login" component={Login} />
             <Route exact path="/Signup" component={Signup} />

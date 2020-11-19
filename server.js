@@ -14,18 +14,18 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
+
+// Add routes, both API and view
+app.use(routes);
+
 // Connect to Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/petbuild",
+  process.env.MONGODB_URI || "mongodb://localhost/pets",
   {
     useCreateIndex: true,
     useNewUrlParser: true
   }
 );
-
-// Add routes, both API and view
-app.use(routes);
-
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> API server now on port ${PORT}!`);

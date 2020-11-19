@@ -15,6 +15,7 @@ export default {
   },
   // Saves a profile to the database
   saveProfile: function(profileData) {
+    console.log("profile data", profileData)
     return axios.post("/api/pets", profileData);
   }
 };
