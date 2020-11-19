@@ -3,15 +3,15 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
-const apiRoutes = require("./routes/api/pets");
+const pets = require("./routes/api/pets");
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 
 // Body Parser Middleware 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(bodyParser.json);
+app.use(bodyParser.json());
 
 
 // Serve up static assets (usually on heroku)
@@ -30,7 +30,7 @@ mongoose.connect(
 );
 
 // Use Routes
-app.use("./api", apiRoutes);
+app.use("./api/pets", pets);
 
 
 
