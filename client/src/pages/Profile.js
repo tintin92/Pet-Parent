@@ -12,13 +12,13 @@ import {
 
 function Profile() {
 
-    const [profile, setProfile] = useState({})
+    const [profile, setProfiles] = useState({})
 
     // whent his component mounts, grab the profile with the _id of props.match.params.id
     const {id} = useParams()
     useEffect(() => {
         API.getProfile(id)
-          .then(res => setProfile(res.data))
+          .then(res => setProfiles(res.data))
           .catch(err => console.log(err));
       }, [])
     
