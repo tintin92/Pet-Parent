@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { useStoreContext } from "../utils/GlobalState";
 import { ADD_POST, LOADING } from "../utils/actions";
 import API from "../utils/API";
-// import Navbar from '../Navbar/navbar'
 // import tracker component here like navbar above
 
+// use state that will be changed and saved to profile
 function CreateProfile() {
   const [name, changeName] = useState('');
   const [age, changeAge] = useState('');
@@ -48,11 +48,10 @@ function CreateProfile() {
     changeWeight("");
     changeLocation("");
   };
-
+// Form and submit
   return (
     <div>
       {/* to add tracker/budget render it here like below with navbar*/}
-      {/* <Navbar /> */}
       <div className="jumbotron">
         <img
           className="img-fluid img-thumbnail"
