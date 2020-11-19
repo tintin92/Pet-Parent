@@ -1,4 +1,8 @@
-const router = require("express").Router();
+const express = require("express");
+const router = express.Router();
+
+// Pets Model
+const Item = require("../../models/pets")
 const petsController = require("../../controllers/petsController");
 
 // Matches with "/api/pets"

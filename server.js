@@ -1,14 +1,18 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 const path = require("path");
-const routes = require("./routes");
 const app = express();
+const apiRoutes = require("./routes/api/pets");
 
-const PORT = process.env.PORT || 3001;
 
-// Middleware 
+const PORT = process.env.PORT || 5000;
+
+// Body Parser Middleware 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(bodyParser.json);
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -18,15 +22,19 @@ if (process.env.NODE_ENV === "production") {
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/petbuild",
   {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
     useCreateIndex: true,
-    useNewUrlParser: true
   }
 );
 
-// Add routes, both API and view
-app.use(routes);
+// Use Routes
+app.use("./api", apiRoutes);
 
 
-app.listen(PORT, function() {
+
+
+app.listen(PORT, function () {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });

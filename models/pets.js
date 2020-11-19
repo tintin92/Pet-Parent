@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-
+// Create Schema here we use object literals to define our db 
 const PetProfileSchema = new Schema( {
-  
   name: {
     type: String,
     trim: true,
