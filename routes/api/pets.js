@@ -2,7 +2,7 @@ const router = require("express").Router();
 const petsController = require("../../controllers/petsController");
 
 // Matches with "/api/pets"
-router.get("/")
+router.route("/")
   .get(petsController.findAll)
   .post(petsController.create);
 

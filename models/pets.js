@@ -7,27 +7,27 @@ const PetProfileSchema = new Schema( {
   name: {
     type: String,
     trim: true,
-    required: "Enter your pets name"
+    // required: "Enter your pets name"
   },
 
   age: {
     type: Number,
   },
 
-  birthday: {
-    type: Date,
-  },
+  // birthday: {
+  //   type: Date,
+  // },
 
-  species: {
-    type: String,
-    trim: true,
-    required: "i.e. cat, dog, bird.."
-  },
+  // species: {
+  //   type: String,
+  //   trim: true,
+  //   required: "i.e. cat, dog, bird.."
+  // },
 
-  breed: {
-    type: String,
-    required: "i.e. Labrador, Domestic short hair, African Grey.."
-  },
+  // breed: {
+  //   type: String,
+  //   required: "i.e. Labrador, Domestic short hair, African Grey.."
+  // },
 
   weight: {
     type: Number,
@@ -38,19 +38,22 @@ const PetProfileSchema = new Schema( {
     trim: true,
   },
 
-  // allergy: Boolean, // if true then add specific allergy
 
-  // vaccine: {
-  //   type: String,
-  //   trim: true,
-  //   required: "Please least most up-to-date vaccines if any"
-  // },
+  allergy: {
+    type: String,
+  }, // if true then add specific allergy
 
-  // chip: {
-  //   type: Number,
-  //   unique: true,
-  //   required: true
-  // }
+  vaccine: {
+    type: String,
+    trim: true,
+    // required: "Please least most up-to-date vaccines if any"
+  },
+
+  chip: {
+    type: Number,
+    unique: true,
+    // required: true
+  }
 });
 // We are classes in Mongoose right here
 
