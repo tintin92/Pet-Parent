@@ -16,9 +16,9 @@ function PetCard(props) {
                     <ListItem key={post._id}>
                                 <h1>{post.name}</h1>
                                 <p>{post.age}</p>
-                                <p>{post.vaccine}</p>
-                                <p>{post.allergy}</p>
-                                <p>{post.chip}</p>
+                                <p>{post.breed}</p>
+                                <p>{post.species}</p>
+                                <p>{post.microchip}</p>
                                 <p>{post.weight}</p>
                                 <p>{post.location}</p>
                         <DeleteBtn onClick={() => props.removePost(post._id)} />

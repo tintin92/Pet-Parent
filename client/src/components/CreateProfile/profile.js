@@ -9,9 +9,9 @@ import API from "../utils/API";
 function CreateProfile() {
   const [name, changeName] = useState('');
   const [age, changeAge] = useState('');
-  const [vaccine, changeVaccine] = useState('');
-  const [chip, changeChip] = useState('');
-  const [allergy, changeAllergy] = useState('');
+  const [breed, changeBreed] = useState('');
+  const [microchip, changeMicrochip] = useState('');
+  const [species, changeSpecies] = useState('');
   const [weight, changeWeight] = useState('');
   const [location, changeLocation] = useState('');
 //   chip, allergies, nickname
@@ -20,15 +20,15 @@ function CreateProfile() {
 
   const handleSubmit = e => {
     console.log("form submitted");
-    console.log(name, age, allergy, vaccine, chip, weight, location)
+    console.log(name, age, species, breed, microchip, weight, location)
     e.preventDefault();
     dispatch({ type: LOADING });
     API.saveProfile({
       name,
       age,
-      vaccine,
-      allergy,
-      chip,
+      breed,
+      species,
+      microchip,
       weight,
       location
     })
@@ -44,9 +44,9 @@ function CreateProfile() {
 
     changeName("");
     changeAge("");
-    changeVaccine("");
-    changeAllergy("");
-    changeChip("");
+    changeBreed("");
+    changeSpecies("");
+    changeMicrochip("");
     changeWeight("");
     changeLocation("");
   };
@@ -65,9 +65,9 @@ function CreateProfile() {
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" required onChange={(event) => changeName(event.target.value)} value={name} placeholder="Name" />
         <input className="form-control mb-5" required onChange={(event) => changeAge(parseInt(event.target.value))} value={age} placeholder="Age" />
-        <input className="form-control mb-5" required onChange={(event) => changeVaccine(event.target.value)} value={vaccine} placeholder="Vaccine" />
-        <input className="form-control mb-5" required onChange={(event) => changeAllergy(event.target.value)} value={allergy} placeholder="Allergies" />
-        <input className="form-control mb-5" required onChange={(event) => changeChip(parseInt(event.target.value))} value={chip} placeholder="Chip" />
+        <input className="form-control mb-5" required onChange={(event) => changeSpecies(event.target.value)} value={species} placeholder="Species" />
+        <input className="form-control mb-5" required onChange={(event) => changeBreed(event.target.value)} value={breed} placeholder="Breed" />
+        <input className="form-control mb-5" required onChange={(event) => changeMicrochip(parseInt(event.target.value))} value={microchip} placeholder="Microchip Number" />
         <input className="form-control mb-5" required onChange={(event) => changeWeight(parseInt(event.target.value))} value={weight} placeholder="Weight" />
         <input className="form-control mb-5" required onChange={(event) => changeLocation(event.target.value)} value={location} placeholder="Location" />
         <button className="btn btn-success mt-3 mb-5" disabled={state.loading} type="submit">
