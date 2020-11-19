@@ -46,10 +46,10 @@ function Profile() {
         <div className="row">
             <div className="col">
                 <Card>
-                    <CreateProfile />
+                    <PetCard removePost={removePost} posts={state.posts} />
                 </Card>
                 <Card>
-                    <PetCard removePost={removePost} posts={state.posts}/>
+                    <CreateProfile />
                     {/* <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
                     <CardBody>
                         <CardTitle tag="h5">Card title</CardTitle>

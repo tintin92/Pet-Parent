@@ -9,7 +9,7 @@ function Home() {
     <Container>
       <Row lg="2">
         <Col>
-        <Card>
+        <Card mb-2>
         <CardImg top width="100%" src="https://via.placeholder.com/350x150" alt="Card image cap" />
         <CardBody>
           <CardTitle tag="h5">Card Title</CardTitle>

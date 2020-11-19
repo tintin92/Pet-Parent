@@ -1,12 +1,21 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px;
+}
 /* Footer */
-.footer, .container{
+.footer {
     background-color: transparent;
     text-align: center;
-    position: fixed !important;
+    position: absolute;
     width:100%;
     display: block;
     bottom: 0 !important;
     padding: 20px;
+    line-height: 60px;
+    height: 60px;
 }
 /* foot media adjustment */
 @media screen and (max-width: 480px) {
