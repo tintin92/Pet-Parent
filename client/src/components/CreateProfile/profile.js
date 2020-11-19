@@ -14,13 +14,13 @@ function CreateProfile() {
   const [species, changeSpecies] = useState('');
   const [weight, changeWeight] = useState('');
   const [location, changeLocation] = useState('');
-//   chip, allergies, nickname
+  const [gender, changeGender] = useState('');
 
   const [state, dispatch] = useStoreContext();
 
   const handleSubmit = e => {
     console.log("form submitted");
-    console.log(name, age, species, breed, microchip, weight, location)
+    console.log(name, age, species, breed, microchip, weight, location, gender)
     e.preventDefault();
     dispatch({ type: LOADING });
     API.saveProfile({
@@ -30,7 +30,8 @@ function CreateProfile() {
       species,
       microchip,
       weight,
-      location
+      location,
+      gender
     })
       .then(result => {
         console.log("result", result)
@@ -49,6 +50,7 @@ function CreateProfile() {
     changeMicrochip("");
     changeWeight("");
     changeLocation("");
+    changeGender("");
   };
 // Form and submit
   return (
@@ -65,6 +67,7 @@ function CreateProfile() {
       <form className="form-group mt-5 mb-5" onSubmit={handleSubmit}>
         <input className="form-control mb-5" required onChange={(event) => changeName(event.target.value)} value={name} placeholder="Name" />
         <input className="form-control mb-5" required onChange={(event) => changeAge(parseInt(event.target.value))} value={age} placeholder="Age" />
+        <input className="form-control mb-5" required onChange={(event) => changeGender(event.target.value)} value={gender} placeholder="Gender" />
         <input className="form-control mb-5" required onChange={(event) => changeSpecies(event.target.value)} value={species} placeholder="Species" />
         <input className="form-control mb-5" required onChange={(event) => changeBreed(event.target.value)} value={breed} placeholder="Breed" />
         <input className="form-control mb-5" required onChange={(event) => changeMicrochip(parseInt(event.target.value))} value={microchip} placeholder="Microchip Number" />

@@ -14,6 +14,7 @@ const petProfileSeed = [
       {
         name: "Lucy",
         age: 6,
+        gender: "female",
         weight: 100,
         species: "Dog",
         breed: "Rottweiler",
