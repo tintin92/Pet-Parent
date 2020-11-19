@@ -16,6 +16,7 @@ function PetCard(props) {
                     <ListItem key={post._id}>
                                 <h1>{post.name}</h1>
                                 <p>{post.age}</p>
+                                <p>{post.gender}</p>
                                 <p>{post.breed}</p>
                                 <p>{post.species}</p>
                                 <p>{post.microchip}</p>

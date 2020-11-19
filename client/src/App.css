@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -21,9 +21,9 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-body, html {
+} */
+/* 
+body {
   height: 100%;
-  background-color: #cfcbd1;
-}
+  background-color: purple !important;
+} */

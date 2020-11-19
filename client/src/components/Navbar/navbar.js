@@ -1,39 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./style.css";
-import { Link } from "react-router-dom";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  NavbarText
+} from 'reactstrap';
 
-function Navbar() {
-    return (
-        <div className="outer-container">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" id="name">Pet Pals</a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul className="navbar-nav">
-                        <li className="nav-item active">
-                            <Link className="nav-link" to="/">Home</Link>
-                        </li>
-                        {/* <li className="nav-item">
-                            <Link className="nav-link" to="/createProfile">Create Profile</Link>
-                        </li> */}
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/Profile">Profile</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/Login">Login</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/Signup">Sign up</Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+const navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    );
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div className="container">
+      <Navbar light expand="md" className="navB">
+        <NavbarBrand href="/">Home</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              <NavLink href="/profile">Profile</NavLink>
+            </NavItem>
+            <NavItem>
+            </NavItem>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+              <i class="fas fa-bars"></i>
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+                <NavLink href="/Login">Login</NavLink>
+                </DropdownItem>
+                <DropdownItem>
+                <NavLink href="/Signup">Sign up</NavLink>
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>
+                  Reset
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </Nav>
+          <NavbarText>Pet Pals</NavbarText>
+        </Collapse>
+      </Navbar>
+    </div>
+  );
 }
 
-export default Navbar;
+export default navbar;

@@ -14,6 +14,11 @@ const PetProfileSchema = new Schema( {
     type: Number,
   },
 
+  gender: {
+    type: String,
+    trim: true,
+  },
+
   species: {
     type: String,
     trim: true,
