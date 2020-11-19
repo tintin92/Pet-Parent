@@ -7,7 +7,7 @@ import API from "../components/utils/API";
 // import CreateProfile from "./CreateProfile"
 import {
     Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button, Jumbotron
+    CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
 function Profile() {
@@ -26,11 +26,11 @@ function Profile() {
           <Container fluid>
             <Row>
               <Col size="md-12">
-                <Jumbotron>
+                {/* <Jumbotron> */}
                   <h1>
                     {profile.name} 
                   </h1>
-                </Jumbotron>
+                {/* </Jumbotron> */}
               </Col>
             </Row>
             <Row>
