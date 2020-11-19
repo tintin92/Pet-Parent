@@ -4,10 +4,10 @@ import "./App.css";
 import Navbar from "./components/Navbar/navbar";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
+import CreateProfile from "./pages/CreateProfile";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./components/Footer/footer";
-import { StoreProvider } from "./components/utils/GlobalState";
 
 
 
@@ -16,17 +16,15 @@ function App() {
   return (
     <Router>
       <div>
-        <StoreProvider>
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-         
+            <Route exact path="/CreateProfile" component={CreateProfile} />
             <Route exact path="/Profile" component={Profile} />
             <Route exact path="/Login" component={Login} />
             <Route exact path="/Signup" component={Signup} />
           </Switch>
           <Footer />
-        </StoreProvider>
       </div>
     </Router>
   );
