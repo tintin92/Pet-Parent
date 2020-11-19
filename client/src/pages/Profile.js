@@ -38,11 +38,11 @@ function Profile() {
                 <article>
                   <h2>Pet Stats</h2>
                   <p>
-                    {profile.age},
-                    {profile.birthday},
-                    {profile.species},
-                    {profile.breed},
-                    {profile.weight},
+                    {profile.age}
+                    {profile.birthday}
+                    {profile.species}
+                    {profile.breed}
+                    {profile.weight}
                     {profile.location}
                   </p>
                 </article>

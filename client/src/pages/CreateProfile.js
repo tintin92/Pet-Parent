@@ -25,10 +25,11 @@ useEffect(() => {
 // loads all profiles and sets them
 function loadProfiles() {
   API.getProfiles()
-  .then(res =>
-    setProfiles(res.data)
+  .then(res => 
+    API.setProfiles(res.data)
     )
     .catch(err => console.log(err));
+  
 };
 
 // deletes a profile from the database with a given id then reloads profiles from the db
@@ -123,7 +124,7 @@ return (
                   <ListItem key={profile._id}>
                     <Link to={"/profiles/" + profile._id}>
                       <strong>
-                        {profile.name} - {profile.speicies}
+                        {profile.name} - {profile.species}
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => deleteProfile(profile._id)} />
