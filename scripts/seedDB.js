@@ -12,13 +12,13 @@ const petProfileSeed = [
   {
     pets: [
       {
-        petName: "Lucy",
+        name: "Lucy",
         age: 6,
         weight: 100,
-        food: "Pedigree",
-        allergy: "wheat",
-        vaccine: "Up to Date",
-        chipNumber: "34567"
+        species: "Dog",
+        breed: "Rottweiler",
+        location: "Palm Bay",
+        microchip: "34567"
       }
     ]
   }
