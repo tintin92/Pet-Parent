@@ -31,7 +31,7 @@ const navbar = () => {
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-              <i class="fas fa-bars"></i>
+              <i className="fas fa-bars"></i>
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>

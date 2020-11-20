@@ -45,10 +45,10 @@ function Profile() {
     return (
         <div className="row">
             <div className="col">
-                <Card>
+                <Card className="ml-3">
                     <PetCard removePost={removePost} posts={state.posts} />
                 </Card>
-                <Card>
+                <Card className="ml-3">
                     <CreateProfile />
                     {/* <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
                     <CardBody>
@@ -67,7 +67,7 @@ function Profile() {
                 </Card>
             </div>
             <div className="col">
-                <Card>
+                <Card className="mr-3">
                     <Budget />
                     {/* <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
                     <CardBody>
@@ -77,7 +77,7 @@ function Profile() {
                         <Button>Button</Button>
                     </CardBody> */}
                 </Card>
-                <Card>
+                <Card className="mr-3">
                     <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
                     <CardBody>
                         <CardTitle tag="h5">Card title</CardTitle>
