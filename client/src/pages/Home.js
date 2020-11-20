@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, CardBody, CardTitle, CardText, CardImg, CardImgOverlay } from 'reactstrap';
 import Jumbo from "../components/Jumbo/jumbotron";
+import "./style.css";
 
 function Home() {
   return (
@@ -9,7 +10,7 @@ function Home() {
     <Container>
       <Row lg="2">
         <Col>
-        <Card mb-2>
+        <Card>
         <CardImg top width="100%" src="https://via.placeholder.com/350x150" alt="Card image cap" />
         <CardBody>
           <CardTitle tag="h5">Card Title</CardTitle>

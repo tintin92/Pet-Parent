@@ -3,6 +3,7 @@ import "./style.css";
 
 function Footer() {
     return (
+        <div className="wrapper">
         <div className="footer mt-4">
             <div className="container col-md-1">
                 <a className="petfinder" href="https://www.petfinder.com/">
@@ -12,6 +13,7 @@ function Footer() {
                 <i className="fas fa-2x ml-3">&#xf6d3;</i>
                 </a>
             </div>
+        </div>
         </div>
     );
 }
