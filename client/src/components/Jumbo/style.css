@@ -10,9 +10,6 @@ h1, p {
 
 .jumbotron {
     background-image: url("/assets/images/pets1.png") !important;
-    /* margin-left: 110px;
-    margin-right: 110px; */
-    margin-top: 10px;
     font-family: 'Goldman', cursive;
     background-size: 90%;
     background-position: bottom;
@@ -22,7 +19,7 @@ h1, p {
     color: #3B0273
 }
 
-div {
+.color {
     background-color: #cfcbd1;
 }
 

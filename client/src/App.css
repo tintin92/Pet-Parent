@@ -22,8 +22,8 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 } */
-/* 
+
 body {
   height: 100%;
-  background-color: purple !important;
-} */
+  background-color: #b7b9b8 !important;
+}

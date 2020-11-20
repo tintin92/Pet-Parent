@@ -1,29 +1,32 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 /* Footer */
-.footer, .container{
-    background-color: transparent;
-    text-align: center;
-    position: fixed !important;
+.footer {
+    height: 60px;
+    background-color: #3B0273;
+    /* text-align: center;
+    position: fixed;
     width:100%;
     display: block;
     bottom: 0 !important;
     padding: 20px;
+    line-height: 60px;
+    height: 60px; */
 }
-/* foot media adjustment */
-@media screen and (max-width: 480px) {
-    .footer {
-        position: fixed;
-        top: auto;
-        left: auto;
-        height: auto;
-    }
+.fa-2x {
+    justify-content: right;
+    margin-top: 15px;
+    color: #ddb4ff;
 }
-/* Font Awesome Icon */
-.fa {
-    margin-right: 5px !important;
+.fa-2x:hover {
+    color:  #ecd7fd;
 }
-.fas {
-    margin-left: 5px !important;
-}
-.container {
-    justify-content: center !important;
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
 }
