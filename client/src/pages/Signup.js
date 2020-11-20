@@ -34,10 +34,10 @@ function Signup() {
                     </FormGroup>
                 </Col>
                 <Button>Submit</Button>
-                <p class="or">
+                <p className="or">
                     <br />
                     OR 
-            </p>
+                </p>
                 <p>
                     Do you have an account?
                     <br/>
