@@ -3,11 +3,9 @@ import { Card, Container } from 'reactstrap'
 import Form from "../Form/form";
 import ListExp from "../ListExp/list";
 
-const ALL_EXPENSES = [
-    { id: 1, name: 'Buy a book', amount: 20 },
-    { id: 2, name: 'Buy a milk', amount: 5 },
-    { id: 3, name: 'Book a flight ticket', amount: 225 }
-]
+const ALL_EXPENSES = localStorage.getItem('expenses')
+  ? JSON.parse(localStorage.getItem('expenses'))
+  : []
 
 function Expenses() {
     const [expenses, setExpenses] = useState(ALL_EXPENSES);
