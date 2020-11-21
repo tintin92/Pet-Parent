@@ -4,7 +4,6 @@ import { useStoreContext } from "../components/utils/GlobalState";
 import React, { useEffect } from "react";
 import { REMOVE_POST, UPDATE_POSTS, LOADING } from "../components/utils/actions";
 import API from "../components/utils/API";
-import Form from "../components/Form/form";
 import CreateProfile from "../components/CreateProfile/profile"
 import {
     Card, CardImg, CardText, CardBody,
@@ -69,9 +68,7 @@ function Profile() {
             </div>
             <div className="col">
                 <Card className="mr-3">
-                    <Form>
                     <Expenses />
-                    </Form>
                 </Card>
                 <Card className="mr-3">
                     <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
