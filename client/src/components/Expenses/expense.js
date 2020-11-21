@@ -44,6 +44,10 @@ function Expenses() {
         localStorage.setItem('expenses', JSON.stringify(expenses))
       }, [expenses])
 
+      const handleClearExpenses = () => {
+        setExpenses([])
+      }  
+
     return (
         <Container className="text-center">
             <Card>
@@ -67,6 +71,7 @@ function Expenses() {
                     handleName={handleName}
                     handleAmount={handleAmount}
                     handleSubmitForm={handleSubmitForm}
+                    handleClearExpenses={handleClearExpenses}
                 />
                 <ListExp expenses={expenses} />
             </Card>
