@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Card, Container } from 'reactstrap'
 import Form from "../Form/form";
 import ListExp from "../ListExp/list";
@@ -39,6 +39,10 @@ function Expenses() {
             console.log('Invalid expense name or the amount')
         }
     }
+
+    useEffect(() => {
+        localStorage.setItem('expenses', JSON.stringify(expenses))
+      }, [expenses])
 
     return (
         <Container className="text-center">
