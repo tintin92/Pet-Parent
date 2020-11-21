@@ -26,7 +26,20 @@ function Expenses() {
 
     const handleSubmitForm = event => {
         event.preventDefault()
-        // do something when submitting the form
+        //check whether the name is not empty and the amount is not negative
+        if (name !== '' && amount > 0) {
+            // single expense object
+            const expense = { name, amount }
+            // do not override previous values in the array
+            // use spread operator to access previous values
+            setExpenses([...expenses, expense])
+
+            // clean input fields
+            setName('')
+            setAmount('')
+        } else {
+            console.log('Invalid expense name or the amount')
+        }
     }
 
     return (
@@ -34,7 +47,7 @@ function Expenses() {
             <Card>
                 <h3 className="display-6">
                     Expense Tracker React App
-        </h3>
+                </h3>
                 <div>
                     <p>
                         Total Expense:{' '}
@@ -53,10 +66,10 @@ function Expenses() {
                     handleAmount={handleAmount}
                     handleSubmitForm={handleSubmitForm}
                 />
-      <ListExp expenses={expenses} />
+                <ListExp expenses={expenses} />
             </Card>
         </Container>
-    )
+    );
 }
 
 export default Expenses
