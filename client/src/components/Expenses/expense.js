@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Card, Container } from 'reactstrap'
+import { Card } from 'reactstrap'
 import Form from "../Form/form";
 import ListExp from "../ListExp/list";
+import "./style.css";
+
 
 const ALL_EXPENSES = localStorage.getItem('expenses')
   ? JSON.parse(localStorage.getItem('expenses'))
@@ -49,11 +51,11 @@ function Expenses() {
       }  
 
     return (
-        <Container className="text-center">
+        // <Container className="text-center">
             <Card>
-                <h3 className="display-6">
-                    Expense Tracker React App
-                </h3>
+                <h1 className="display-6 mt-3">
+                    Expense Tracker
+                </h1>
                 <div>
                     <p>
                         Total Expense:{' '}
@@ -75,7 +77,7 @@ function Expenses() {
                 />
                 <ListExp expenses={expenses} />
             </Card>
-        </Container>
+        // </Container>
     );
 }
 
