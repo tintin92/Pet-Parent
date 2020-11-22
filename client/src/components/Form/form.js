@@ -1,4 +1,5 @@
 import React from 'react'
+import "./style.css";
 
 import {
   Form as BTForm,
@@ -13,10 +14,10 @@ const Form = ({ name, amount, handleName, handleAmount, handleSubmitForm, handle
 }) => (
   <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
     <FormGroup className="row">
-      <Label for="exampleEmail" sm={2}>
-        Name of Expense
+      <Label for="Expense" sm={2}>
+        Expense
       </Label>
-      <Col sm={4}>
+      <Col md={5}>
         <Input
           type="text"
           name="name"
@@ -31,7 +32,7 @@ const Form = ({ name, amount, handleName, handleAmount, handleSubmitForm, handle
       <Label for="exampleEmail" sm={2}>
         $ Amount
       </Label>
-      <Col sm={4}>
+      <Col md={5}>
         <Input
           type="number"
           name="amount"
@@ -42,10 +43,10 @@ const Form = ({ name, amount, handleName, handleAmount, handleSubmitForm, handle
         />
       </Col>
       </FormGroup>
-    <Button type="submit" color="primary">
+    <Button type="submit" className="addBtn">
       Add
     </Button>{' '}
-    <Button type="submit" color="danger" onClick={handleClearExpenses}>
+    <Button type="submit" className="delBtn" onClick={handleClearExpenses}>
       Delete
     </Button>
   </BTForm>
