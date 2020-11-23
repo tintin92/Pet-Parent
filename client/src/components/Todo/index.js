@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import TodoForm from "../TodoForm/index";
-import TodoList from '../TodoList';
 
 
 function Todo({todos, completeTodo, removeTodo, updateTodo }) {

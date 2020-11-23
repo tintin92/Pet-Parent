@@ -12,7 +12,7 @@ import {
 
 const Form = ({ name, amount, handleName, handleAmount, handleSubmitForm, handleClearExpenses
 }) => (
-  <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
+  <BTForm className="row1" style={{ margin: 10 }} onSubmit={handleSubmitForm}>
     <FormGroup className="row">
       <Label for="Expense" sm={2}>
         Expense

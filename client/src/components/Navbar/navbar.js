@@ -47,7 +47,11 @@ const navbar = () => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Pet Pals</NavbarText>
+          <NavbarText>
+          <i className="fas fa-paw"></i>
+            Pet Pals
+          <i className="fas fa-paw"></i>
+          </NavbarText>
         </Collapse>
       </Navbar>
   );
