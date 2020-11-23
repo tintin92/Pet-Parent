@@ -1,8 +1,10 @@
 import React from "react";
+import "./style.css";
 import { ListGroup, ListGroupItem } from "reactstrap";
+
 // listing expenses from the expense array
 const ListExp = ({ expenses }) => (
-  <div>
+  <div className="items1">
     <ListGroup>
       {expenses.map(item => (
         <ListGroupItem key={item.id}>

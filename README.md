@@ -1,29 +1,59 @@
-# Create React Express App
+# Pet Pals
+  
 
-## About This Boilerplate
+  ![GitHub repo size](https://github.com/tintin92/Pet-Parent) ![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)
+#
+#### Repo: https://github.com/tintin92/Pet-Parent
+# 
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+## Description 
+A web application built for pet parents of all types. This app allows the user to signup or login, create a profile, track expenses, and add/mark off on a todo list. It makes pet parenting simple.
 
-## Starting the app locally
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
 
-```
-npm install
-```
+## Table of Contents
+- [Usage](#usage)
+- [Technologies Used](#technology)
+- [License](#license)
+- [Questions](#questions)
 
-This should install node modules within the server and the client folder.
 
-After both installations complete, run the following command in your terminal:
 
-```
-npm start
-```
+## Usage
+<img src="/assets/images/exp.PNG" alt="expense tracker" width="500"/>
+<img src="/assets/images/Todo.PNG" alt="map" width="500"/>
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
-## Deployment (Heroku)
+## Technologies Used
+- HTML
+- CSS (ReactStrap)
+- Javascript
+- Express
+- React
+- MERN
+- Hooks
+- Font Awesome
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+
+
+## License
+
+MIT
+
+
+
+
+## Tests
+
+There are currently no tests
+
+
+
+## Questions
+
+Have any questions? Reach out to a team member: 
+- [eschiavoni2](https://github.com/eschiavoni2)
+- [tintin92](https://github.com/tintin92)
+
+

@@ -57,7 +57,7 @@ function Expenses() {
                     Expense Tracker
                 </h1>
                 <div>
-                    <p>
+                    <p className="te">
                         Total Expense:{' '}
                         <span className="text-success">
                             ${' '}
